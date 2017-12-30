@@ -17,10 +17,10 @@ do
    esac
 done
 
-COMMAND="$BIN"
+COMMAND="$BIN validate"
 
-if [ "STRICT" ]; then
+if [ "$STRICT" -eq 1 ]; then
     COMMAND="$COMMAND --strict"
 fi
 
-eval "${BIN}"
+eval "${COMMAND}"
