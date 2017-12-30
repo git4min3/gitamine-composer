@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+BIN=composer
+STRICT=true
+
+# The reading options part
+while [[ $# -gt 0 ]] && [[ ."$1" = .--* ]] ;
+do
+    opt="$1";
+    shift;              #expose next argument
+    case "$opt" in
+        "--" ) break 2;;
+        "--bin="* )
+           BIN="${opt#*=}";;
+        "--strict="* )
+           STRICT="${opt#*=}";;
+   esac
+done
+
+COMMAND="$BIN"
+
+if [ "STRICT" ]; then
+    COMMAND="$COMMAND --strict"
+fi
+
+eval "${BIN}"
