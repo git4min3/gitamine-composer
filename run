@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 BIN=composer
-STRICT=true
+STRICT="1"
 
 # The reading options part
 while [[ $# -gt 0 ]] && [[ ."$1" = .--* ]] ;
@@ -19,7 +19,7 @@ done
 
 COMMAND="$BIN validate"
 
-if [ "$STRICT" -eq 1 ]; then
+if [ "$($STRICT)" -eq "1" ]; then
     COMMAND="$COMMAND --strict"
 fi
 
