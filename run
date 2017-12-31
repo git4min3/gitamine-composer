@@ -19,7 +19,7 @@ done
 
 COMMAND="$BIN validate"
 
-if [ "$($STRICT)" -eq "1" ]; then
+if [ "$STRICT" == "1" ]; then
     COMMAND="$COMMAND --strict"
 fi
 
