@@ -2,9 +2,10 @@
 
 ## Requirements
 
-* php >= 7.1
+* php >= 7.1.3
 * composer
 * Linux/Mac
+* Gitamine
 
 ## Installation
 
