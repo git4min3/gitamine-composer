@@ -14,7 +14,7 @@ do
    esac
 done
 
-if [ -e x.txt ]
+if [ -e "${DIR}/hooks/${EVENT}.sh" ]
 then
     eval "${DIR}/hooks/${EVENT}.sh $*"
 else
