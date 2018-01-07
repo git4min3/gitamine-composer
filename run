@@ -13,7 +13,7 @@ do
            EVENT="${opt#*=}";;
    esac
 done
-
+echo "${DIR}/hooks/${EVENT}.sh";
 if [ -e "${DIR}/hooks/${EVENT}.sh" ]
 then
     eval "${DIR}/hooks/${EVENT}.sh $*"
