@@ -1,5 +1,7 @@
 {
   "name": "gitamine-composer",
-  "authors": ["Javier González Cuadrado <xgc1986@gmail.com>"],
+  "authors": [
+    "Javier González Cuadrado <xgc1986@gmail.com>"
+  ],
   "plugin": "git4min3/gitamine-composer"
 }
