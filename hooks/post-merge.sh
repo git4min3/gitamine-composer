@@ -3,12 +3,11 @@
 BIN=composer
 
 # The reading options part
-while [[ $# -gt 0 ]] && [[ ."$1" = .--* ]] ;
+while [[ $# -gt 0 ]] && [[ ."$1" = .* ]] ;
 do
     opt="$1";
     shift;
     case "$opt" in
-        "--" ) break 2;;
         "--bin="* )
            BIN="${opt#*=}";;
         "--strict="* )

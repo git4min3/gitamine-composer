@@ -5,14 +5,14 @@ EVENT=""
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # The reading options part
-while [[ $# -gt 0 ]] && [[ ."$1" = .--* ]] ;
+while [[ $# -gt 0 ]] && [[ ."$1" = .* ]] ;
 do
     opt="$1";
     shift;              #expose next argument
     case "$opt" in
         "--event="* )
            EVENT="${opt#*=}";;
-   esac
+    esac
 done
 
 if [ -e "${DIR}/hooks/${EVENT}.sh" ]
